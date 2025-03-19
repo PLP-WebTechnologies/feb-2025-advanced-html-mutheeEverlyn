@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Advanced HTML5 Elements and Forms"/>
+    <meta name="author" content="Everlyn Muthoni Muthee"/>
+    <title>Advanced HTML5 Elements and Forms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to right, rgb(188, 188, 221), rgb(235, 168, 179));
+        }
+        h1, h2, h3 {
+            color: blue;
+            text-align: center;
+        }
+        ol {
+            text-align: center;
+            list-style-position: inside; 
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid black;
+            text-align: center;
+        }
+        form {
+            width: 50%;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+            background: white;
+        }
+        fieldset {
+            border: none;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background: darkblue;
+        }
+        audio, video {
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Advanced HTML5 Elements and Forms</h1>
+    <h2>Favourite movies I have watched</h2>
+    <ol type="i">
+        <li>Reacher</li>
+        <li>Black Panther</li>
+        <li>Game of Thrones</li>
+        <li>The Night Agent</li>
+    </ol>
+    <h3>Join us for a movie night</h3>
+    <img src="https://images.pexels.com/photos/2372945/pexels-photo-2372945.jpeg?auto=compress&cs=tinysrgb&w=600" alt="theater room" style="display: block; margin: 20px auto; max-width: 100%; height: 300px;"/>
+    <table>
+        <caption>Names of people who want to join us</caption>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Mobile</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td>Everlyn</td>
+            <td>1234, Nairobi</td>
+            <td>0712345678</td>
+            <td>evah@gmail.com</td>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>14, Nyeri</td>
+            <td>0712345678</td>
+            <td>john@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Wanjiru</td>
+            <td>123, Nanyuki</td>
+            <td>0714545678</td>
+            <td>wanjiru@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Kamau</td>
+            <td>100, Kisumu</td>
+            <td>0714545678</td>
+            <td>kamau@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Paul</td>
+            <td>001, Kiambu</td>
+            <td>0757945678</td>
+            <td>paul@gmail.com</td>
+        </tr>
+    </table>
+    <form action="" method="post">
+        <fieldset>
+            <legend style="text-align: center;">Fill in the form below to register</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="John Mwangi Kamau" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="********" required>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            <label for="gender">Select your gender:</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female" style="display: inline;">Female</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male" style="display: inline;">Male</label>
+            <input type="radio" id="other" name="gender" value="other" required>
+            <label for="other" style="display: inline;">Other</label>
+            <br><br>
+            <label for="hobbies">Select your hobbies:</label>
+            <input type="checkbox" id="reading" name="hobbies" value="reading">
+            <label for="reading" style="display: inline;">Reading</label>
+            <input type="checkbox" id="swimming" name="hobbies" value="swimming">
+            <label for="swimming" style="display: inline;">Swimming</label>
+            <input type="checkbox" id="travelling" name="hobbies" value="travelling">
+            <label for="travelling" style="display: inline;">Travelling</label>
+            <input type="checkbox" id="watching_movies" name="hobbies" value="watching_movies">
+            <label for="watching_movies" style="display: inline;">Watching movies</label>
+            <br><br>
+            <label for="country">Select your country:</label>
+            <select id="country" name="country" required>
+                <option value="kenya">Kenya</option>
+                <option value="uganda">Uganda</option>
+                <option value="tanzania">Tanzania</option>
+                <option value="rwanda">Rwanda</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+    <h3>Listen to our favorite movie soundtrack</h3>
+    <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <h3>Watch a trailer of our favorite movie</h3>
+    <video controls width="600">
+        <source src="https://videos.pexels.com/video-files/3134589/3134589-sd_640_360_24fps.mp4" type="video/mp4">
+        <!-- alternative if video is missing -->
+        video not found
+    </video>
+</body>
+</html>
